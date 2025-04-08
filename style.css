@@ -1,0 +1,220 @@
+/* style.css */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #005fa3;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+  }
+  
+  nav ul li a {
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #0077cc;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #0077cc, #00b8d9);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero .btn {
+    background-color: white;
+    color: #0077cc;
+    padding: 0.8rem 1.6rem;
+    border-radius: 25px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hero .btn:hover {
+    background-color: #e6f0f8;
+    transform: scale(1.05);
+  }
+  
+  /* Main Container */
+  .container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  /* Section Headings */
+  section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    border-left: 6px solid #0077cc;
+    padding-left: 0.75rem;
+    margin-top: 3rem;
+  }
+  
+  /* Cards: Jobs & Projects */
+  .job, .project {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .job:hover, .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job h3, .project h3 {
+    color: #0077cc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job span, .project span {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .job ul {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    color: #555;
+  }
+  
+  /* Skills & Education */
+  #skills p, #education p {
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-left: 4px solid #0077cc;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Contact Section */
+  .contact p {
+    margin: 0.75rem 0;
+    font-size: 1rem;
+  }
+  
+  .contact a {
+    font-weight: 500;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #e8edf1;
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 4rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
